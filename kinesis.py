@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 
 #Send the json objects created in #1 to kinesis firehose so that they are processed and written to S3 
 
-session = boto3.Session(aws_access_key_id="AKIA2OLGZXFFDIN7ZVV5",aws_secret_access_key="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",region_name="ap-south-1")
+session = boto3.Session(aws_access_key_id="AKI**********",aws_secret_access_key="hiZ2pp*******************",region_name="ap-south-1")
 
 def lambda_handler(event, context):
     firehoseClient = session.client('firehose')
