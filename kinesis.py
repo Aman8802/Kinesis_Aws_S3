@@ -36,3 +36,5 @@ def lambda_handler(event, context):
     
     for observation in list_of_objects:
         print("Observation ====>",observation)
+        response = firehoseClient.put_record(DeliveryStreamName='amanteststream',Record = {'Data': json.dumps(observation)})
+        print("response ====>", response)
